@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box ;
+        }
+       body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(loginbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .container{ 
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding: 15px;
+        border: 3px solid skyblue;
+        border-radius: 5px;
+    }
+    label{
+        background-color: skyblue;
+    }
+    input{
+        margin: 5px 0px;
+        height: 35px;
+        padding: 7px;
+    }
+    button{
+        height: 30px;
+        margin: 5px 0px;
+        background-color: aqua;
+        border: none;
+        border-radius: 5px;
+        color: #333;
+        top: 50%;
+        left:50%;
+    }
+    button:hover{
+        background-color: #333;
+        color: skyblue;
+    }
+
+    </style>
+</head>
+    <body style="background-color: seagreen;">
+    
+        
+<div class="container">
+
+   <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+     <center> <input type="submit" value="Login"></center>
+    </form>
+</div>
+
+<script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            // Simplified check for a valid username and password
+            if (username === "harododo@doogo.com" && password === "hatdoger432") {
+                // Redirect to the home page (ken.html)
+                window.location.href = "HOMEPAGE1.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
